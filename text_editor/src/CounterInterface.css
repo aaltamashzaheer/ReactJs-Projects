@@ -3,11 +3,7 @@
     padding: 0;
     font-family: montserrat;
 }
-.alldata{
-    display: flex;
-    justify-content: center;
-    
-}
+
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -17,6 +13,7 @@
 #text-area{
     width: 500px;
     height: 300px;
+    border-radius: 5px;
     padding: 15px;
     font-size: 18px;
     background: #f5f5f5;
@@ -24,11 +21,12 @@
     box-shadow: 0 2px 20px rgba(0,0,0,0.5);
     justify-content: center;
     align-items: center;
-    
+    margin-bottom: 20px;
     display: block;
 }
 .wrapper label{
     background: #fe5a4a;
+    border-radius: 10px;
     font-size: 18px;
     border: none;
     padding: 15px 135px ;
@@ -44,14 +42,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(240, 164, 48);
         
     }
 .btn{
-    margin: 10px;
+    margin: 6px;
+    
     
 }
 
 .container{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
