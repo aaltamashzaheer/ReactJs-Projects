@@ -2,12 +2,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
+    display: block;
     }
 
     h1 {
     text-align: center;
     }
 
+    
+
     p {
     margin-bottom: 10px;
     }
+    li {
+    margin-bottom: 10px;
+    
+    }
+    .features {
+    display: block;
+    }
+
+    footer {
+    text-align: center;
+    margin-top: 20px;
+    }
+    
