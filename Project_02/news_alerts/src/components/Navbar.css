@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    
+}
+
+.brand-logo{
+    
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    box-shadow: 0 5px 40px rgba(0,0,0,0.05);
+}
+
+ul{
+    display: flex;
+    float: right;
+    margin-left: 400px;
+    
+}
+ul a{
+    margin-right: 40px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+
+}
+
+.form-check{
+    font-weight: 500;
+}

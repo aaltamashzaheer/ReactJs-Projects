@@ -1,11 +1,15 @@
+import Navbar from './components/Navbar';
+import News from './components/News';
+import React, {Component} from 'react';
 
 
-function App() {
-  return (
-   <>
-   
-  </>
-  );
+export default class App extends Component {
+    render() {
+        return (
+            <div>
+               <Navbar/>
+               <News/> 
+            </div>
+        );
+    }
 }
-
-export default App;
