@@ -47,7 +47,7 @@ async componentDidMount(){
     return (
       <div>
         <div className="container my-3"></div>
-        <h2>These are the top headlines of Web Times</h2>
+        {/* <h2>These are the top headlines of Web Times</h2> */}
         <div className="row">
         {this.state.articles.map((element)=>{
             return <div className="col-md-4" key= {element.url} >
