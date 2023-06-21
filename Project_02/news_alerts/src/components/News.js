@@ -56,7 +56,6 @@ async componentDidMount(){
         })}
         </div>
         
-        
       </div>
     )
   }
