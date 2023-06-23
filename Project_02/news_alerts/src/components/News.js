@@ -34,20 +34,47 @@ export class News extends Component {
         super();
         this.state = {
            articles: this.articles,
-           loading : false
+           loading : false,
+           page:1
+
     }
 }
 async componentDidMount(){
-  let url = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=7bc6ddd0cb5a4dfaa590694566477f20';
+  let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=7bc6ddd0cb5a4dfaa590694566477f20`;
   let data = await fetch(url);
   let ParsedData= await data.json();
-  this.setState({articles: ParsedData.articles})
+  this.setState({
+  articles: ParsedData.articles,
+  totalResults: ParsedData.totalResults})
 }
+ handleNextButton = async ()=> {
+  if(this.state.page+1 > Math.ceil(this.state.totalResults/20)){
+    return;
+  }
+  else{
+  let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=7bc6ddd0cb5a4dfaa590694566477f20&page=${this.state.page+1}&pageSize=20`;
+  let data = await fetch(url);
+  let ParsedData= await data.json();
+  this.setState({articles: ParsedData.articles,
+  page: this.state.page+1})
+
+  }
+
+
+}
+
+  handlePreviousButton = async ()=> {
+    let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=7bc6ddd0cb5a4dfaa590694566477f20&page=${this.state.page-1}&pageSize=20`;
+  let data = await fetch(url);
+  let ParsedData= await data.json();
+  this.setState({articles: ParsedData.articles,
+  page: this.state.page-1})
+  }
   render() {
     return (
       <div>
         <div className="container my-3"></div>
-        {/* <h2>These are the top headlines of Web Times</h2> */}
+        <h2 className="text-center">Today's Top Headlines are:</h2> 
         <div className="row">
         {this.state.articles.map((element)=>{
             return <div className="col-md-4" key= {element.url} >
@@ -55,7 +82,14 @@ async componentDidMount(){
             </div>
         })}
         </div>
+        <div className="container d-flex justify-content-between">
+
+
+        <button disabled={this.state.page<=1} type="button" class="btn btn-primary" onClick={this.handlePreviousButton}  > &larr; Previous</button>
+
+        <button disabled= {this.state.page+1 > Math.ceil(this.state.totalResults/20)} type="button" class="btn btn-primary" onClick={this.handleNextButton} > Next &rarr; </button>
         
+        </div>
       </div>
     )
   }
