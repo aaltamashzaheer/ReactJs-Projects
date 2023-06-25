@@ -32,7 +32,7 @@ ul li:last-child {
   margin-right: 0;
 }
 
-ul a {
+ul .navbar_items {
   text-decoration: none;
   color: #000;
   font-size: 16px;

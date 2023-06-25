@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 export class Navbar extends Component {
+
   render() {
     return (
       <div>
-        <link
+        <a
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
@@ -13,19 +15,17 @@ export class Navbar extends Component {
 
         <nav className={"navbar navbar-expand-lg navbar-light  "}>
         
-              <a href="/" class="brand-logo">Web Times</a>
+              <Link className="navbar_items" to="/" class="brand-logo">Web Times</Link>
   
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="/">FAQ</a></li>
-              <li><a href="/">Business</a></li>
-              <li><a href="/">Entertainment</a></li>
-              <li><a href="/">General</a></li>
-              <li><a href="/">Health</a></li>
-              <li><a href="/">Science</a></li>
-              <li><a href="/">Sports</a></li>
-              <li><a href="/">Technology</a></li>
+              <li><Link className="navbar_items" to="/">Home</Link></li>
+              <li><Link className="navbar_items" to="/business">Business</Link></li>
+              <li><Link className="navbar_items" to="/entertainment">Entertainment</Link></li>
+              <li><Link className="navbar_items" to="/general">General</Link></li>
+              <li><Link className="navbar_items" to="/health">Health</Link></li>
+              <li><Link className="navbar_items" to="/science">Science</Link></li>
+              <li><Link className="navbar_items" to="/sports">Sports</Link></li>
+              <li><Link className="navbar_items" to="/technology">Technology</Link></li>
 
 
               <div className={"form-check form-switch "}>
