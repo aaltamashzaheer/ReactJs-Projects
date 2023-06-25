@@ -12,14 +12,21 @@ export class Navbar extends Component {
         />
 
         <nav className={"navbar navbar-expand-lg navbar-light  "}>
-          <div className="nav-wrapper">
-            <a href="/" className={"brand-logo active "}>
-              Web Times
-            </a>
+        
+              <a href="/" class="brand-logo">Web Times</a>
+  
             <ul>
-              <a href="/">Home</a>
-              <a href="/">About</a>
-              <a href="/">FAQ</a>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">About</a></li>
+              <li><a href="/">FAQ</a></li>
+              <li><a href="/">Business</a></li>
+              <li><a href="/">Entertainment</a></li>
+              <li><a href="/">General</a></li>
+              <li><a href="/">Health</a></li>
+              <li><a href="/">Science</a></li>
+              <li><a href="/">Sports</a></li>
+              <li><a href="/">Technology</a></li>
+
 
               <div className={"form-check form-switch "}>
                 <input
@@ -36,7 +43,6 @@ export class Navbar extends Component {
                 </label>
               </div>
             </ul>
-          </div>
         </nav>
       </div>
     );

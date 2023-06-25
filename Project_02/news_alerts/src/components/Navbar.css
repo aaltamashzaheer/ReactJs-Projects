@@ -1,13 +1,3 @@
-* {
-  font-family: Poppins;
-}
-
-.brand-logo {
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
 nav {
   display: flex;
   height: 80px;
@@ -15,22 +5,36 @@ nav {
   background: #fff;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px 0 100px;
+  padding: 0 50px;
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.05);
 }
 
-ul {
-  display: flex;
-  float: right;
-  margin-left: 400px;
-}
-ul a {
-  margin-right: 40px;
-  text-decoration: none;
-  color: black;
+.brand-logo {
+  font-size: 18px;
   font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-.form-check {
+ul {
+  
+  display: flex;
+  list-style-type: none;
+  
+}
+
+ul li {
+  margin-right: 40px;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+ul a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
   font-weight: 500;
 }
