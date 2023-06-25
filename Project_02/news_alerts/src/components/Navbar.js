@@ -15,7 +15,7 @@ export class Navbar extends Component {
 
         <nav className={"navbar navbar-expand-lg navbar-light  "}>
         
-              <Link className="navbar_items" to="/" class="brand-logo">Web Times</Link>
+              <Link className="navbar_items brand-logo" to="/" >Web Times</Link>
   
             <ul>
               <li><Link className="navbar_items" to="/">Home</Link></li>
